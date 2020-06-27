@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="SwipeViewDemo.MainPage">
+    <ScrollView>
+        <StackLayout>
+            <SwipeView>
+                <SwipeView.RightItems>
+                    <SwipeItems
+                        Mode="Execute">
+                        <SwipeItem
+                            Invoked="SwipeItem_Invoked"
+                            Text="Delete"
+                            IconImageSource="ic_delete"
+                            BackgroundColor="OrangeRed" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <SwipeView.Content>
+                    <Grid
+                        HeightRequest="60"
+                        WidthRequest="300"
+                        BackgroundColor="LightGray">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Swipe Left - Execute" />
+                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+
+            <SwipeView>
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItem
+                            Invoked="SwipeItem_Invoked"
+                            Text="Delete"
+                            IconImageSource="ic_delete"
+                            BackgroundColor="OrangeRed" />
+                        <SwipeItem
+                            Invoked="SwipeItem_Favorite_Invoked"
+                            Text="Favorite"
+                            IconImageSource="ic_favorite"
+                            BackgroundColor="LimeGreen" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <SwipeView.Content>
+                    <Grid
+                        HeightRequest="60"
+                        WidthRequest="300"
+                        BackgroundColor="LightGray">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Swipe Left - Reveal" />
+                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                        <SwipeItem
+                            Invoked="SwipeItem_Invoked"
+                            Text="Delete"
+                            IconImageSource="ic_delete"
+                            BackgroundColor="OrangeRed" />
+                        <SwipeItem
+                            Invoked="SwipeItem_Favorite_Invoked"
+                            Text="Favorite"
+                            IconImageSource="ic_favorite"
+                            BackgroundColor="LimeGreen" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <SwipeView.Content>
+                    <Grid
+                        HeightRequest="60"
+                        WidthRequest="300"
+                        BackgroundColor="LightGray">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Swipe Right - Keep Open" />
+                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+
+            <SwipeView>
+                <SwipeView.TopItems>
+                    <SwipeItems>
+                        <SwipeItem
+                            Invoked="SwipeItem_Invoked"
+                            Text="Delete"
+                            IconImageSource="ic_delete"
+                            BackgroundColor="OrangeRed" />
+                        <SwipeItem
+                            Invoked="SwipeItem_Favorite_Invoked"
+                            Text="Favorite"
+                            IconImageSource="ic_favorite"
+                            BackgroundColor="LimeGreen" />
+                    </SwipeItems>
+                </SwipeView.TopItems>
+                <SwipeView.Content>
+                    <Grid
+                        HeightRequest="60"
+                        WidthRequest="300"
+                        BackgroundColor="LightGray">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Swipe Down" />
+                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+
+            <SwipeView>
+                <SwipeView.BottomItems>
+                    <SwipeItems>
+                        <SwipeItem
+                            Invoked="SwipeItem_Invoked"
+                            Text="Delete"
+                            IconImageSource="ic_delete"
+                            BackgroundColor="OrangeRed" />
+                        <SwipeItem
+                            Invoked="SwipeItem_Favorite_Invoked"
+                            Text="Favorite"
+                            IconImageSource="ic_favorite"
+                            BackgroundColor="LimeGreen" />
+                    </SwipeItems>
+                </SwipeView.BottomItems>
+                <SwipeView.Content>
+                    <Grid
+                        HeightRequest="60"
+                        WidthRequest="300"
+                        BackgroundColor="LightGray">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Swipe Up" />
+                    </Grid>
+                </SwipeView.Content>
+            </SwipeView>
+
+            <Button
+                Text="Custom Example 1"
+                Clicked="Button_Clicked_1" />
+
+            <Button
+                Clicked="Button_Clicked_2"
+                Text="Custom Example 2" />
+
+            <Button
+                Clicked="Button_Clicked_3"
+                Text="ColectionView" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
